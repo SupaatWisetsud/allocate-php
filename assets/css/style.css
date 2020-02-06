@@ -1,0 +1,366 @@
+#content{
+    margin-left: 200px;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-color: #E5E8E8;
+    overflow: auto;
+}
+
+/* index */
+.title_index {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+.wrapper_post{
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#post{
+    margin-top: 15px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+#post > .post_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 2px solid #333;
+}
+
+#post > .post_body{
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+#post > .post_footer{
+    text-align: end;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+/* end index */
+
+
+/* start edit profile */
+.wrapper-edit-profile{
+    width: 55%;
+    margin: 0 auto;
+}
+.title-edit-profile{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0;
+}
+.form-edit-profile{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+.items-edit-profile-form {
+    margin: 15px 0;
+    display: grid;
+    grid-template: auto / 250px 1fr;
+}
+
+.items-edit-profile-form2 > div {
+    display: grid;
+    grid-template: auto / 250px 1fr;
+    margin: 2px 0;
+}
+.items-edit-profile-form-btn{
+    margin: 10px 0;
+}
+
+/* end edit profile */
+
+
+/* list emp */
+.list-emp{
+    width: 80%;
+}
+.list-emp > .list_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0 ;
+}
+.list-emp > table {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.list-emp > table > thead, tbody, tr, td, th{
+    padding: 5px 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+    text-align: center;
+}
+.list-emp > table > thead{
+    background-color: #58D68D;
+    color: white;
+}
+/* end list emp */
+
+
+/* start add emd */
+.wrapper-add-emp{
+    width: 50%;
+    margin: 0 auto;
+}
+.title-add-emp{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0;
+}
+.warpper-form-add-emp{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.items-add-emp-form{
+    display: grid;
+    grid-template: auto / 1fr;
+    margin: 15px 0;
+}
+.items-add-emp-form2{
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    grid-gap: 15px;
+    margin: 15px 0;
+}
+.items-add-emp-form > button{
+    font-size: 24px;
+}
+/* end add emd */
+
+/* start job card */
+.wrapper-job-card{
+    width: 50%;
+    margin: 0 auto;
+}
+.title-job-card{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0; 
+}
+.wrapper-job-card-form{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.wrapper-job-card-form > form > div{
+    display: grid;
+    grid-gap: 5px;
+    grid-template: 1fr/ 1fr;
+    margin:10px 0;
+}
+.wrapper-job-card-form > form > div > .btn{
+    font-size: 24px;
+}
+/* end job card */
+
+
+/* start work */
+.title-work{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0; 
+}
+.wrapper-work-admin{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper-work-admin > div {
+    width: 49.5%;
+}
+.wrapper-work-user table{
+    width: 100%;
+}
+
+.work table{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.work table > thead {
+    background-color: #58D68D;
+    color: white;
+}
+.work table > thead > tr > td{
+    border: 2px solid #C39BD3;
+}
+/* end work */
+
+/* start work me */
+.wrapper-work-me{
+    display: flex;
+    justify-content: space-between;
+}
+.title-work-me{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0; 
+}
+.wrapper-work-me > div {
+    width: 49.5%;
+}
+.wrapper-work-me > div > table{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+.wrapper-work-me > div > table > thead{
+    background-color: #58D68D;
+    color: white;
+}
+.wrapper-work-me table > thead > tr > th{
+    border: 2px solid #C39BD3;
+}
+/* end work me */
+
+/* start work detail */
+.wrapper-wrok-detail{
+    width: 60%;
+    margin: 0 auto;
+}
+.title-work-detail{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0; 
+}
+.box-work-detail{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0;
+}
+.box-work-detail > p {
+    margin: 10px 0;
+}
+/* end work detail */
+
+/* start work submit */
+.wrapper-work-submit{
+    width: 60%;
+    margin: 0 auto;
+}
+.title-work-submit{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: white;
+    background-color: #3498DB;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0; 
+}
+.upload-work-submit > div{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0;
+}
+.upload > p{
+    margin: 10px;
+}
+.btn-work-submit{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 10px 0;
+}
+.btn-work-submit > button {
+    font-size: 24px;
+    padding: 5px 10px;
+}
+/* end work submit */
+
+/* work submit */
+.dropzone{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    border: 2px rgba(0,0,0,0.3) dashed;
+    line-height: 300px;
+    color : #ccc;
+    font-size: 35px;
+}
+.dropzone.dragover{
+    border-color: #3498DB;
+    background-color: rgba(52, 152, 219, 0.493);
+    color: white;
+}
+/* end work submit */

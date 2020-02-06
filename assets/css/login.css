@@ -1,0 +1,23 @@
+.wrapper-form-login{
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    padding: 5px;
+}
+
+.container-page-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E8E8;
+}
+
+.form-login > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.form-login > .title {
+    font-size: 24px;
+}

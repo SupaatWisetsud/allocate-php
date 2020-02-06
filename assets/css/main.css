@@ -1,0 +1,91 @@
+@import "./login.css";
+@import "./sidebar.css";
+@import "./style.css";
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    display: flex;
+}
+
+input,
+textarea{
+    font-size: 18px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.3);
+    outline: none;
+}
+
+.m-horizontal-auto{
+    margin: 0 auto;
+}
+
+.mt-3{
+    margin-top: 3cm;
+}
+.mt-2{
+    margin-top: 2cm;
+}
+.mt-1{
+    margin-top: 1cm;
+}
+.mb-3{
+    margin-bottom: 3cm;
+}
+.mb-2{
+    margin-bottom: 2cm;
+}
+.mb-1{
+    margin-bottom: 1cm;
+}
+
+.primary{
+    background-color: #5DADE2;
+}
+
+.danger{
+    background-color: #E74C3C;
+}
+
+.success{
+    background-color: #58D68D;
+}
+
+.btn{
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out, 
+                box-shadow .2s ease-in-out;
+    outline: none;
+    text-decoration: none;
+    margin: 5px 0;
+    text-align: center;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+.border-primary{
+    border-bottom: 3px solid #3a5777!important;
+}
+
+.border-danger{
+    border-bottom: 3px solid #773a3a!important;
+}
+
+.border-success{
+    border-bottom: 3px solid #3f773a!important;
+}
+

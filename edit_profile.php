@@ -1,6 +1,21 @@
 <?php 
     session_start();
     require_once './connect.php';
+    if(isset($_POST["btn_submit"])){
+        $id = $_SESSION["user_id"];
+
+        $sql = "UPDATE tb_member SET m_username = '{$_POST['username']}', m_firstname = '{$_POST['fname']}', m_lastname = '{$_POST['lname']}', m_email = '{$_POST['email']}', m_numberphone = '{$_POST['phone']}' ";
+
+        if(mysqli_query($con, $sql)){
+            echo "<script>
+                    alert('Update success');
+                </script>";
+        }else{
+            echo "<script>
+                    alert('Update fail');
+                    </script>";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,40 +40,29 @@
                 <form method="post">
                     <div class="items-edit-profile-form">
                         <label for="username">Username</label>
-                        <input type="text" value="<?= $row['m_username'] ?>">
+                        <input type="text" name="username" value="<?= $row['m_username'] ?>">
                     </div>
-                    <div class="items-edit-profile-form">
-                        <label for="password">Password</label>
-                        <input type="text" placeholder="******">
-                    </div>
-                    <div class="items-edit-profile-form">
-                        <label for="password">Confrim Password</label>
-                        <input type="text" placeholder="******">
-                    </div class="items-edit-profile-form">
+
                     <div class="items-edit-profile-form2">
                         <div>
                             <label for="password">First Name</label>
-                            <input type="text" value="<?= $row['m_firstname'] ?>">
+                            <input type="text" name="fname" value="<?= $row['m_firstname'] ?>">
                         </div>
                         <div>
                             <label for="password">Last Name</label>
-                            <input type="text"  value="<?= $row['m_lastname'] ?>">
+                            <input type="text" name="lname" value="<?= $row['m_lastname'] ?>">
                         </div>
                     </div>
                     <div class="items-edit-profile-form">
                         <label for="email">Email</label>
-                        <input type="email"  value="<?= $row['m_email'] ?>">
-                    </div>
-                    <div class="items-edit-profile-form">
-                        <label for="profile">Profile</label>
-                        <input type="file">
+                        <input type="email" name="email"  value="<?= $row['m_email'] ?>">
                     </div>
                     <div class="items-edit-profile-form">
                         <label for="number_phone">Number Phone</label>
-                        <input type="number"  value="<?= $row['m_numberphone'] ?>">
+                        <input type="number" name="phone" value="<?= $row['m_numberphone'] ?>">
                     </div>
                     <div class="items-edit-profile-form-btn">
-                        <button type="submit" class="btn primary border-primary">อัพเดท</button>
+                        <button type="submit" class="btn primary border-primary" name="btn_submit">อัพเดท</button>
                         <a href="index.php" class="btn danger border-danger">ยกเลิก</a>
                     </div>
                 </form>

